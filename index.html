@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title> Moradia UTFPR </title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="teste.js"></script>
+        <script type="text/javascript" src="jquery-ui.custom.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOVsqOeaPybTdLpIUSAi-DZiRMqWXaGQE" type="text/javascript"></script> 
+
+    </head>
+
+    <body>
+        <form method="post" action="" id="">   
+            <fieldset>
+                <legend>Moradias</legend>   
+                <div>
+                        <label for="txtNome">Nome: </label>
+                        <input type="text" id="txtNome" name="txtNome"/>
+                </div>
+                <div>
+                        <label for="txtMoradia">Tipo de Moradia: </label>
+                    <select id="cbMoradia">
+                        <option value="0"></option>
+                        <option value="1">República</option>
+                        <option value="2">Kitnet</option>
+                        <option value="3">Apartamento</option>
+                        <option value="4">Pensionato</option>
+                    </select>
+                    <label for="txtVagas">Vagas: </label>
+                    <select id="cbVagas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="2">3</option>
+                            <option value="2">4+</option>
+                    </select>
+                    <label for="txtValor">Faixa de valor: </label>
+                    <select onchange="" id="cbValor" >
+                            <option value="1">Entre R$200,00 e R$300,00</option>
+                            <option value="2">Entre R$300,00 e R$400,00</option>
+                            <option value="3">Entre R$400,00 e R$500,00</option>
+                            <option value="4">Entre R$500,00 e R$600,00</option>
+                            <option value="5">Entre R$600,00 e R$700,00</option>
+                        </select>
+                    <label for="txtQuarto">Tipo de Quarto: </label>
+                    <select id="cbQuarto">
+                            <option value="1">Individual</option>
+                            <option value="2">Compartilhado</option>
+                    </select>
+                    <label for="txtMobilia">Mobília: </label>
+                    <select id="cbMobilia">
+                            <option value="1">Sim</option>
+                            <option value="2">Não</option>
+                    </select>
+                    <label for="txtGrupo">Grupo: </label>
+                    <select id="cbGrupo">
+                            <option value="1">Somente meninas</option>
+                            <option value="2">Somente meninos</option>
+                            <option value="3">Misto</option>
+                    </select>
+
+
+                </div>
+                <div>
+                        <label for="txtEndereco">Endereço: </label>
+                        <input type="text" id="txtEndereco" name="txtEndereco"/>
+                </div>
+                <div>
+                    <input type="button" id="btnEndereco" name="btnEndereco" value="Inserir endereço" onclick="adicionar()" />
+                </div>
+               <!-- <div>
+                        <input type="button" id="btnBuscar" name="btnBuscar" value="Inserir" onclick="adicionar()"/>
+                </div> -->
+         
+                <div id="mapa" style="height: 500px; width: 500px" >
+                </div>
+                <div>
+                        <label for="txtLegenda">Legenda</label>
+                </div>
+                <div>
+                        <label for="txtRep"> Republica </label>
+                        <img src="rep3.png"> 
+                        <br/>
+                        <label for="txtAp">Apartamento</label>
+                        <img src="ap2.png"> 
+                        <br/>
+                        <label for="txtPens">Pensionato</label>
+                        <img src="pensionato4.png"> 
+                        <br/>
+                        <label for="txtKitNet">Kitnet</label>
+                        <img src="kitnet3.png">
+                </div>
+         
+                <input type="hidden" id="txtLatitude" name="txtLatitude" />
+                <input type="hidden" id="txtLongitude" name="txtLongitude" />
+            </fieldset>
+        </form>
+    </body>
+</html>
