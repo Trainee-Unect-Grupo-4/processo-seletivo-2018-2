@@ -1,0 +1,87 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Moradias UTFPR</title>
+
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
+        <link href="estilo.css" type="text/css" rel="stylesheet" />
+
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOVsqOeaPybTdLpIUSAi-DZiRMqWXaGQE&sensor=false"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="mapa.js"></script>
+        <script type="text/javascript" src="jquery-ui.custom.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <div id="apresentacao">    
+            <form method="post" action="index.html">    
+                <fieldset>
+
+                    <legend>REPME!</legend>    
+                    <div class = "campos">
+                            <label for="txtNome">Nome: </label>
+                            <input type="text" id="nome" name="nome"/>
+                    </div>
+                    <div class ="campos">
+                        <select id="moradia" name = "moradia">
+                            <option selected disabled hidden> Tipo de Moradia</option>
+                            <option value="República">República</option>
+                            <option value="Kitnet">Kitnet</option>
+                            <option value="Apartamento">Apartamento</option>
+                            <option value="Pensionato">Pensionato</option>
+                        </select>
+                        <select id="vaga" name="vaga">
+                                <option selected disabled hidden>Vagas</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4+">4+</option>
+                        </select>
+                        <select id="valor" name="valor">
+                                <option selected disabled hidden>Faixa de valor</option>
+                                <option value="Entre R$200,00 e R$300,00">Entre R$200,00 e R$300,00</option>
+                                <option value="Entre R$300,00 e R$400,00">Entre R$300,00 e R$400,00</option>
+                                <option value="Entre R$400,00 e R$500,00">Entre R$400,00 e R$500,00</option>
+                                <option value="Entre R$500,00 e R$600,00">Entre R$500,00 e R$600,00</option>
+                                <option value="Entre R$600,00 e R$700,00">Entre R$600,00 e R$700,00</option>
+                            </select>
+                        <select id="quarto" name="quarto">
+                                <option selected disabled hidden>Tipo de Quarto</option>
+                                <option value="Individual">Individual</option>
+                                <option value="Compartilhado">Compartilhado</option>
+                        </select>
+                        <select id="mobilia" name="mobilia">
+                                <option selected disabled hidden>Mobilia</option>
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                        </select>
+                        <select id="grupo" name="grupo">
+                                <option selected disabled hidden>Grupo</option>
+                                <option value="Somente meninas">Somente meninas</option>
+                                <option value="Somente meninos">Somente meninos</option>
+                                <option value="Misto">Misto</option>
+                        </select>
+                    <div class="campos">
+                        <label for="txtEndereco">Endereço:</label>
+                        <input type="text" id="txtEndereco" name="txtEndereco" />
+                        <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" />
+                    </div>
+
+                    <div id="mapa"></div>
+                    
+                	<input type="submit" value="Enviar" name="btnEnviar" />
+                    
+                    <input type="hidden" id="txtLatitude" name="txtLatitude" />
+                    <input type="hidden" id="txtLongitude" name="txtLongitude" />
+
+                </fieldset>
+            </form>
+
+
+        </div>
+    
+    </body>
+</html>
