@@ -1,0 +1,212 @@
+ body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    position: absolute;
+    height: 48px;
+    width: 100%;
+    background-color: royalblue;
+    z-index: 4;
+
+}
+.header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.header ul li {
+    padding: 20px 10px;
+    
+}
+.header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace, sans-serif, arial;
+}
+.header ul li i {
+    color: #333;
+
+}
+.side-nav {
+    position: absolute;
+    width: 100%;
+    background-color: rebeccapurple;
+    height: 100vh;
+    z-index: 3;
+    padding-top: 44px;
+}
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.side-nav ul li {
+    padding: 20px 10px;
+    border-bottom: 1px solid #333;
+}
+.side-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: monospace, sans-serif, arial;
+}
+.side-nav ul li i {
+    color: #333;
+}
+.main-content {
+    display: flex;
+    padding-top: 44px;
+}
+#mapa { 
+	width: 800px;
+	height: 94vh;
+    border: 15px solid #ccc;
+}
+.form {
+    display: block;
+    height: 94vh;
+    width: 600px;
+    background-color: rebeccapurple;
+}
+.form label{
+    background: #333; 
+	border-radius: 6px 0 0 6px; 
+	color: #f0f0f0; 
+	cursor: pointer; 
+	display: block; 
+	float: left; 
+	font: 15px 'Open Sans',Arial;
+	padding: 7px 13px;
+}
+.form input[type="text"] { 
+	background: #FFF;
+	color: #666;
+	display: block;
+	font: 15px 'Open Sans',Arial; 
+	height: 25px;
+	padding: 9px;
+}
+
+.form select{ 
+	background: #333; 
+	border-radius: 6px 6px 6px 6px; 
+	color: #f0f0f0; 
+	cursor: pointer; 
+	display: block; 
+	float: left; 
+	font: 15px 'Open Sans',Arial;
+	padding: 7px 13px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.form input[type="button"] { 
+	background: #2679A5; 
+	border-radius: 0 6px 6px 0;
+    color: #FFF;
+    cursor: pointer;
+    height: 34px;
+    font: 15px 'Open Sans',Arial;
+    padding: 2px 13px 6px;
+    width: 150px;
+
+    -webkit-transition: background .2s ease-in;
+    -moz-transition: background .2s ease-in;
+    -ms-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+
+.form input[type="button"]:hover { background: #12587C }
+
+input[type="submit"] {
+	background: #2679A5; 
+	border-radius: 6px;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font: 20px 'Open Sans',Arial;
+    padding: 7.5px 15px;
+    width: 250px;
+
+    -webkit-transition: background .2s ease-in;
+    -moz-transition: background .2s ease-in;
+    -ms-transition: background .2s ease-in;
+    -o-transition: background .2s ease-in;
+    transition: background .2s ease-in;
+}
+
+input[type="submit"]:hover { background: #12587C }
+
+
+.ui-autocomplete { 
+	background: #fff; 
+	border-top: 1px solid #ccc;
+	cursor: pointer; 
+	font: 15px 'Open Sans',Arial;
+	margin-left: 3px;
+	width: 493px !important;
+	position: fixed;
+}
+
+.ui-autocomplete .ui-menu-item { 
+	list-style: none outside none;
+	padding: 7px 0 9px 10px;
+}
+
+.ui-autocomplete .ui-menu-item:hover { background: #eee }
+
+.ui-autocomplete .ui-corner-all { 
+	color: #666 !important;
+	display: block;
+}
+
+@media screen and (min-width: 600px) {
+    .side-nav {
+        width: 80px;
+    }
+    .side-nav ul li {
+        text-align: center;
+    }
+    .side-nav ul li span:nth-child(2){
+        display: none;
+    }
+    .side-nav ul li {
+        font-size: 20px;
+    }
+    .main-content {
+        margin-left: 90px;
+    }
+    .header ul li {
+        text-align: justify;
+    }
+    .header ul li i {
+        font-size: 16px;
+        
+    }
+}
+@media screen and (min-width: 1000px) {
+    .side-nav {
+        width: 200px;
+    }
+    .side-nav ul li {
+        text-align: left;
+    }
+    .side-nav ul li span:nth-child(2) {
+        display: inline;
+    }
+    .side-nav ul li i {
+        font-size: 16px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+    .header ul li i {
+        font-size: 20px;
+    }
+}
