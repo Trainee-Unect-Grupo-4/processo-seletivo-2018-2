@@ -6,11 +6,11 @@ const Local = require("../../models/Local");
 
 // Postando um local no MongoDB
 
-router.post("/", (req, res) => {
+router.post("/create", (req, res) => {
   const newLocal = new Local({
     nome: req.body.nome,
     moradia: req.body.moradia,
-    vagas: req.body.vagas,
+    vagas: req.body.vaga,
     quarto: req.body.quarto,
     mobilia: req.body.mobilia,
     valor: req.body.valor,
@@ -21,11 +21,12 @@ router.post("/", (req, res) => {
   });
 
   newLocal.save().then(item => res.json(item));
+  res.redirect("http://127.0.0.1:5500/index.html");
 });
 // Coletando todos os locais no banco.
 router.get("/", (req, res) => {
-  Local.find().then(local => res.json(local));
-  // console.log(local);
+  const local = Local.find();
+  local.then(local => res.json({ array: local }));
 });
 
 module.exports = router;

@@ -1,9 +1,10 @@
 var geocoder;
 var map;
 var marker;
+var json = "http://127.0.0.1:5000/api/local/";
+var infowindow = new google.maps.InfoWindow();
 
 function initialize() {
-  //Setando posição do mapa
   var latlng = new google.maps.LatLng(-23.1862746, -50.6573834);
   var options = {
     zoom: 15,
@@ -11,13 +12,42 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  //Criando o mapa
   map = new google.maps.Map(document.getElementById("mapa"), options);
+  $.getJSON(json, function(json1) {
+    $.each(json1.array, function(key, data) {
+      var latLng = new google.maps.LatLng(data.latitude, data.longitude);
+      let image;
+      if (data.moradia == "República") {
+        image = "images/rep3.png";
+      } else if (data.moradia == "Apartamento") {
+        image = "images/ap2.png";
+      } else if (data.moradia == "Pensionato") {
+        image = "images/pensionato4.png";
+      } else if (data.moradia == "Kitnet") {
+        image = "images/kitnet3.png";
+      }
+      var marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        icon: image,
+        title: data.nome
+      });
 
-  //Retorna a latitude e a longitude de um endereço
+      var details = "Nome: " + data.nome + " <br/> Tipo: " + data.moradia + ".";
+
+      bindInfoWindow(marker, mapa, infowindow, details);
+
+      function bindInfoWindow(marker, map, infowindow, strDescription) {
+        google.maps.event.addListener(marker, "click", function() {
+          infowindow.setContent(strDescription);
+          infowindow.open(map, marker);
+        });
+      }
+    });
+  });
+
   geocoder = new google.maps.Geocoder();
 
-  //Criando o marcador
   marker = new google.maps.Marker({
     map: map
   });
@@ -38,13 +68,13 @@ $(document).ready(function() {
           var latitude = results[0].geometry.location.lat();
           var longitude = results[0].geometry.location.lng();
 
-          $("#endereco").attr("value", results[0].formatted_address);
-          $("#latitude").attr("value", latitude);
-          $("#longitude").attr("value", longitude);
+          $("#txtEndereco").val(results[0].formatted_address);
+          $("#txtLatitude").val(latitude);
+          $("#txtLongitude").val(longitude);
 
-          var nome = document.getElementById("nome").value;
           var moradia = document.getElementById("moradia");
           var moradiaSelecionada = moradia.options[moradia.selectedIndex].text;
+          //verificação para troca do ícone
           if (moradiaSelecionada == "República") {
             image = "images/rep3.png";
           } else if (moradiaSelecionada == "Apartamento") {
@@ -54,74 +84,32 @@ $(document).ready(function() {
           } else if (moradiaSelecionada == "Kitnet") {
             image = "images/kitnet3.png";
           }
-          marker = new google.maps.Marker({
-            map: map,
-            icon: image
-          });
-
-          var vagas = document.getElementById("vagas");
-          var vagaSelecionada = vagas.options[vagas.selectedIndex].text;
-          var vagas = document.getElementById("vagas");
-          var vagaSelecionada = vagas.options[vagas.selectedIndex].text;
-          var quarto = document.getElementById("quarto");
-          var quartoSelecionado = quarto.options[quarto.selectedIndex].text;
-          var mobilia = document.getElementById("mobilia");
-          var mobiliaSelecionada = mobilia.options[mobilia.selectedIndex].text;
-          var valor = document.getElementById("valor");
-          var valorSelecionado = valor.options[valor.selectedIndex].text;
-          var grupo = document.getElementById("grupo");
-          var grupoSelecionado = grupo.options[grupo.selectedIndex].text;
-          var endereco = document.getElementById("endereco").value;
-
-          var iwContent =
-            '<div id="iw_container">' +
-            '<div class="iw_title">' +
-            moradiaSelecionada +
-            " " +
-            nome +
-            "<br /> Vagas: " +
-            vagaSelecionada +
-            "<br />Quarto: " +
-            quartoSelecionado +
-            "<br />Mobilia: " +
-            mobiliaSelecionada +
-            "<br />Valor: " +
-            valorSelecionado +
-            "<br />" +
-            grupoSelecionado +
-            "<br />Endereço: " +
-            endereco +
-            "</div></div>";
 
           var location = new google.maps.LatLng(latitude, longitude);
+
+          marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            position: location
+          });
 
           marker.setPosition(location);
           map.setCenter(location);
           map.setZoom(16);
-
-          var image;
-
-          var infowindow = new google.maps.InfoWindow({
-            content: iwContent
-          });
-
-          marker.addListener("click", function() {
-            infowindow.open(map, marker);
-          });
         }
       }
     });
   }
 
   $("#btnEndereco").click(function() {
-    if ($(this).val() != "") carregarNoMapa($("#endereco").val());
+    if ($(this).val() != "") carregarNoMapa($("#txtEndereco").val());
   });
 
-  $("#endereco").blur(function() {
+  $("#txtEndereco").blur(function() {
     if ($(this).val() != "") carregarNoMapa($(this).val());
   });
 
-  $("#endereco").autocomplete({
+  $("#txtEndereco").autocomplete({
     source: function(request, response) {
       geocoder.geocode(
         { address: request.term + ", Brasil", region: "BR" },
@@ -140,13 +128,15 @@ $(document).ready(function() {
       );
     },
     select: function(event, ui) {
-      $("#latitude").attr("value", ui.item.latitude);
-      $("#longitude").attr("value", ui.item.longitude);
+      $("#txtLatitude").val(ui.item.latitude);
+      $("#txtLongitude").val(ui.item.longitude);
       var location = new google.maps.LatLng(
         ui.item.latitude,
         ui.item.longitude
       );
-      newMarker();
+      marker.setPosition(location);
+      map.setCenter(location);
+      map.setZoom(16);
     }
   });
 });
