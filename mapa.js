@@ -33,7 +33,25 @@ function initialize() {
         title: data.nome
       });
 
-      var details = "Nome: " + data.nome + " <br/> Tipo: " + data.moradia + ".";
+      var details =
+        '<div id="iw_container">' +
+        '<div class="iw_title">' +
+        data.moradia +
+        " " +
+        data.nome +
+        "<br /> Vagas: " +
+        data.vagas +
+        "<br />Quarto: " +
+        data.quarto +
+        "<br />Mobilia: " +
+        data.mobilia +
+        "<br />Valor: " +
+        data.valor +
+        "<br />" +
+        data.grupo +
+        "<br />Endereço: " +
+        data.endereco +
+        "</div></div>";
 
       bindInfoWindow(marker, mapa, infowindow, details);
 
@@ -48,8 +66,10 @@ function initialize() {
 
   geocoder = new google.maps.Geocoder();
 
+  var utf = "images/utf.png";
   marker = new google.maps.Marker({
-    map: map
+    map: map,
+    icon: utf
   });
 
   marker.setPosition(latlng);
