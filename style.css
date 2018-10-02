@@ -79,6 +79,7 @@
     display: block;
     height: 40px;
     float: left;
+    text-align: center;
     font: 18px "Quicksand", sans-serif;
     padding: 7px 13px;
     width: 150px;
@@ -120,24 +121,6 @@
     margin-top: 15px; 
   }
   
-  input[type="submit"] {
-    background: #4682B4;
-    border-radius: 6px;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    font: 20px "Quicksand", sans-serif;
-    padding: 7.5px 10px;
-    width: 400px;
-    margin-top: 20px;
-  
-    -webkit-transition: background 0.2s ease-in;
-    -moz-transition: background 0.2s ease-in;
-    -ms-transition: background 0.2s ease-in;
-    -o-transition: background 0.2s ease-in;
-    transition: background 0.2s ease-in;
-  }
   
   input[type="submit"] {
     background: #4682B4;
@@ -149,7 +132,7 @@
     font: 20px "Quicksand", sans-serif;
     padding: 7.5px 10px;
     width: 250px;
-    margin-top: 20px;
+    margin-top: 10px;
   
     -webkit-transition: background 0.2s ease-in;
     -moz-transition: background 0.2s ease-in;
@@ -239,9 +222,10 @@
 
     footer{
         background-color: #ffffff;
-        font: 90% "Quicksand", sans-serif;
+        font: 25px "Quicksand", sans-serif;
         color: #4682b4;
-        height: 23px;
+        margin-top: 90px;
+        height: 40;
     }
     .mapapesquisa{
         margin-top: 50px;

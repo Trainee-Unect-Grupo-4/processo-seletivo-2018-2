@@ -6,7 +6,7 @@
     <title>REP-ME!</title>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
-    <link href="estilo.css" type="text/css" rel="stylesheet" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOVsqOeaPybTdLpIUSAi-DZiRMqWXaGQE&sensor=false"></script>
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -66,14 +66,16 @@
                         <option value="Somente meninos">Somente meninos</option>
                         <option value="Misto">Misto</option>
                     </select>
-                    <div class="campos">
-                        <label class="margin-endereco" for="txtNome">Nome: </label>
-                        <input class="margin-top" type="text" id="nome" name="nome" />
-                        <label class="margin-endereco" for="txtEndereco">Endereço:</label>
-                        <input class="margin-top" type="text" id="txtEndereco" name="endereco" />
-                        <!-- <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" /> -->
+                    <label class="margin-endereco" for="txtNome">Nome: </label>
+                    <input class="margin-top" type="text" id="nome" name="nome" />
+                    <label class="margin-endereco" for="txtEndereco">Endereço:</label>
+                    <input class="margin-top" type="text" id="txtEndereco" name="endereco" />
+                    <label class="margin-endereco" for="txtNome">Telefone </label>
+                    <input class="margin-top" type="text" id="nome" name="nome" />
+                    <label class="margin-endereco" for="txtEndereco">E-mail:</label>
+                    <input class="margin-top" type="text" id="txtEndereco" name="endereco" />
 
-                    </div>
+                    <div class="campos"></div>
                     
                     <div id="mapa"></div>
 
@@ -96,10 +98,5 @@
     
 
 </body>
-<footer>
-    <center>
-    
-    <a href="http://www.utfpr.edu.br">   UTFPR - Universidade Tecnológica Federal do Paraná - Cornélio Procópio</a>         
-</center>
-</footer>
+
 </html>
