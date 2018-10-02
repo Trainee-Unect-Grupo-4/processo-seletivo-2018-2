@@ -169,7 +169,7 @@
   }
   
   img{
-    margin-top: 90px;
+    margin-top: 50px;
   }
   .imagem{
       margin-top: 10px;
@@ -221,12 +221,16 @@
     }
 
     footer{
-        background-color: #ffffff;
-        font: 25px "Quicksand", sans-serif;
+        background-color: #a9a9a9;
+        font: 100% "Quicksand", sans-serif;
         color: #4682b4;
-        margin-top: 30px;
-        height: 40;
+        margin-bottom: 0px;
+        margin-top: 50px;
     }
     .mapapesquisa{
         margin-top: 50px;
+    }
+
+    tr{
+      margin-top: -0.5px;
     }
