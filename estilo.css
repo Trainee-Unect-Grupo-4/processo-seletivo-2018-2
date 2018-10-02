@@ -3,6 +3,9 @@
     padding: 0;
     border: 0;
   }
+
+
+
   body {
     background: #cdcdcd;
   }
@@ -39,16 +42,17 @@
     display: block;
     height: 22px;
     float: left;
-    font: 18px "Quicksand", sans-serif;
+    font: 15px "Quicksand", sans-serif;
     padding: 7px 13px;
     width: 100px;
     border-radius: 6px 6px 6px 6px;
-    align-items: center;
+    
+    text-align: center;
   }
   
   .campos input[type="text"] {
     background: #fff;
-    color: #666;
+    color: #000000;
     display: block;
     float: left;
     font: 15px "Quicksand", sans-serif;
@@ -85,7 +89,11 @@
     margin-left: 5px;
   }
   
-  .campos input[type="button"] {
+  .campos input[type="button"] :hover{
+      background-color: #000;
+
+  }
+  .campos input[type="button"]{
     background: #4682b4;
     border-radius: 0 6px 6px 0;
     color: #fff;
@@ -103,15 +111,15 @@
   }
   
   .campos input[type="button"]:hover {
-    background: #12587c;
+    background: #000000;
   }
   
   #mapa {
-    width: 550px;
+    width: 930px;
     height: 300px;
     box-shadow: 0px 0px 18px #000;
     margin: 0 auto;
-    margin-top: 50px; 
+    margin-top: 15px; 
   }
   
   input[type="submit"] {
@@ -123,7 +131,7 @@
     margin: 0 auto;
     font: 20px "Quicksand", sans-serif;
     padding: 7.5px 10px;
-    width: 250px;
+    width: 400px;
     margin-top: 20px;
   
     -webkit-transition: background 0.2s ease-in;
@@ -171,7 +179,7 @@
   }
   
   .ui-autocomplete .ui-menu-item:hover {
-    background: #eee;
+    background: #000000;
   }
   
   .ui-autocomplete .ui-corner-all {
@@ -180,16 +188,21 @@
   }
   
   img{
-    margin-top: 100px;
+    margin-top: 90px;
   }
-  
+  .imagem{
+      margin-top: 10px;
+      margin-left: 10px;
+
+  }
+
   center{
     animation: fadein 4s;
   }
 
   p{
-      font: 15px "Quicksand", sans-serif;
-      color: #4682b4;
+      font: 25px "Quicksand", sans-serif;
+      color: #4682b4; 
   }
   
   @keyframes fadein {
@@ -224,4 +237,11 @@
     @-ms-keyframes fadeout {
     from { opacity: 1; }
     to { opacity: 0.3; } /* IE */
+    }
+
+    footer{
+        background-color: #ffffff;
+        font: 90% "Quicksand", sans-serif;
+        color: #4682b4;
+        height: 23px;
     }

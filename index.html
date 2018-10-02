@@ -1,138 +1,105 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RepMe! - Repúblicas, Apartamentos, Pensionatos</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+<!DOCTYPE >
+<html>
 
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Moradias UTFPR</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
+    <link href="estilo.css" type="text/css" rel="stylesheet" />
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOVsqOeaPybTdLpIUSAi-DZiRMqWXaGQE&sensor=false"></script>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="mapa.js"></script>
     <script type="text/javascript" src="jquery-ui.custom.min.js"></script>
+    <center>
+        <a href="C:\Users\gilbe\OneDrive\Documentos\GitHub\processo-seletivo-2018-2\processo-seletivo-2018-2\wellcome.html"><img class="imagem"src="C:\Users\gilbe\OneDrive\Documentos\GitHub\processo-seletivo-2018-2\processo-seletivo-2018-2\rep-me7.png"></a>
+    </center>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#" class="nav-trigger">
-                            <span><i class="fa fa-home"></i>
-                                <span>RepMe!</span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
 
-        <div class="side-nav">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa fa-user"></i></span>
-                            <span>Perfil</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa fa-envelope"></i></span>
-                            <span>Mensagens</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#">
-                            <span><i class="fa fa-bar-chart"></i></span>
-                            <span>Sugestões</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span><i class="fa fa-credit-card-alt"></i></span>
-                            <span>Salvos</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="main-content">
-            <div id="mapa"></div>
-            <div class="form">
-                <fieldset>
-                    <form method="post" action="index.html">
-                        <select id="moradia" name="moradia">
-                            <option selected disabled hidden> Tipo de Moradia</option>
-                            <option value="República">República</option>
-                            <option value="Kitnet">Kitnet</option>
-                            <option value="Apartamento">Apartamento</option>
-                            <option value="Pensionato">Pensionato</option>
-                        </select>
-                        <select id="vaga" name="vaga">
-                            <option selected disabled hidden>Vagas</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4+">4+</option>
-                        </select>
-                        <select id="valor" name="valor">
-                            <option selected disabled hidden>Faixa de valor</option>
-                            <option value="Entre R$200,00 e R$300,00">Entre R$200,00 e
-                                R$300,00</option>
-                            <option value="Entre R$300,00 e R$400,00">Entre R$300,00 e
-                                R$400,00</option>
-                            <option value="Entre R$400,00 e R$500,00">Entre R$400,00 e
-                                R$500,00</option>
-                            <option value="Entre R$500,00 e R$600,00">Entre R$500,00 e
-                                R$600,00</option>
-                            <option value="Entre R$600,00 e R$700,00">Entre R$600,00 e
-                                R$700,00</option>
-                        </select>
-                        <select id="quarto" name="quarto">
-                            <option selected disabled hidden>Tipo de Quarto</option>
-                            <option value="Individual">Individual</option>
-                            <option value="Compartilhado">Compartilhado</option>
-                        </select>
-                        <select id="mobilia" name="mobilia">
-                            <option selected disabled hidden>Mobilia</option>
-                            <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
-                        </select>
-                        <select id="grupo" name="grupo">
-                            <option selected disabled hidden>Grupo</option>
-                            <option value="Somente meninas">Somente meninas</option>
-                            <option value="Somente meninos">Somente meninos</option>
-                            <option value="Misto">Misto</option>
-                        </select>
-                        <div class="inputs">
-                            <div id="inputNome">
-                                <label for="txtNome">Nome:</label>
-                                <input type="text" id="nome" name="nome" />
-                            </div>
-                            <div>
-                                <label for="txtEndereco">Endereço:</label>
-                                <input type="text" id="txtEndereco" name="txtEndereco" />
-                                <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" />
-                            </div>
+    <div id="apresentacao">
+        <form method="post" action="http://127.0.0.1:5000/api/local/create">
+            <fieldset>
 
-                            <div id="send">
-                                <input type="submit" value="Enviar" name="btnEnviar" />
-                            </div>
-                            <input type="hidden" id="txtLatitude" name="txtLatitude" />
-                            <input type="hidden" id="txtLongitude" name="txtLongitude" />
-                    </form>
-                </fieldset>
-            </div>
-        </div>
+                <legend>REP-ME!</legend>
+                <div class="campos">
+                    
+                </div>
+                <div class="campos">
+                    <select id="moradia" name="moradia">
+                        <option selected disabled hidden> Tipo de Moradia</option>
+                        <option value="República">República</option>
+                        <option value="Kitnet">Kitnet</option>
+                        <option value="Apartamento">Apartamento</option>
+                        <option value="Pensionato">Pensionato</option>
+                    </select>
+                    <select id="vaga" name="vaga">
+                        <option selected disabled hidden>Vagas</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4+">4+</option>
+                    </select>
+                    <select id="valor" name="valor">
+                        <option selected disabled hidden>Faixa de valor</option>
+                        <option value="Entre R$200,00 e R$300,00">Entre R$200,00 e R$300,00</option>
+                        <option value="Entre R$300,00 e R$400,00">Entre R$300,00 e R$400,00</option>
+                        <option value="Entre R$400,00 e R$500,00">Entre R$400,00 e R$500,00</option>
+                        <option value="Entre R$500,00 e R$600,00">Entre R$500,00 e R$600,00</option>
+                        <option value="Entre R$600,00 e R$700,00">Entre R$600,00 e R$700,00</option>
+                    </select>
+                    <select id="quarto" name="quarto">
+                        <option selected disabled hidden>Tipo de Quarto</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Compartilhado">Compartilhado</option>
+                    </select>
+                    <select id="mobilia" name="mobilia">
+                        <option selected disabled hidden>Mobilia</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                    <select id="grupo" name="grupo">
+                        <option selected disabled hidden>Grupo</option>
+                        <option value="Somente meninas">Somente meninas</option>
+                        <option value="Somente meninos">Somente meninos</option>
+                        <option value="Misto">Misto</option>
+                    </select>
+                    <div class="campos">
+                        <label class="margin-endereco" for="txtNome">Nome: </label>
+                        <input class="margin-top" type="text" id="nome" name="nome" />
+                        <label class="margin-endereco" for="txtEndereco">Endereço:</label>
+                        <input class="margin-top" type="text" id="txtEndereco" name="endereco" />
+                        <!-- <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" /> -->
+
+                    </div>
+                    
+                    <div id="mapa"></div>
+
+                    <input type="hidden" id="txtLatitude" name="latitude" />
+                    <input type="hidden" id="txtLongitude" name="longitude" />
+                    <center>    
+                        <table>
+                            <td><input type="submit" value="Cadastrar" name="btnCadastrar" /></td>
+                            <td><input type="submit" value="Limpar" name="btnClean" /></td>
+                        </table>
+                    </center>
+                     
+
+                    </div>
+            </fieldset>
+        </form>
+
+
     </div>
-    </div>
-    </div>
+    
+
 </body>
-
+<footer>
+    <center>
+    
+    <a href="http://www.utfpr.edu.br">   UTFPR - Universidade Tecnológica Federal do Paraná - Cornélio Procópio</a>         
+</center>
+</footer>
 </html>
