@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #cdcdcd;
+}
+legend {
+  display: none;
+}
+
+#apresentacao {
+  width: 1020px;
+  margin: 1% auto;
+  overflow: hidden;
+}
+
+h1 {
+  font: 25px "Quicksand", sans-serif;
+  text-align: center;
+  color: #dcdcdc;
+  text-shadow: 2px 2px 0 #ccc;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.campos {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.campos label {
+  background: #4682b4;
+  color: #f0f0f0;
+  cursor: pointer;
+  display: block;
+  height: 22px;
+  float: left;
+  font: 18px "Quicksand", sans-serif;
+  padding: 7px 13px;
+  width: 100px;
+  border-radius: 6px 6px 6px 6px;
+
+  text-align: center;
+}
+
+.campos input[type="text"] {
+  background: #fff;
+  color: #000000;
+  display: block;
+  float: left;
+  font: 18px "Quicksand", sans-serif;
+  height: 36px;
+  padding: 9px;
+  width: 344px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.margin-top {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.margin-endereco {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.campos select {
+  background: #4682b4;
+  border-radius: 6px 6px 6px 6px;
+  color: #f0f0f0;
+  cursor: pointer;
+  display: block;
+  height: 40px;
+  float: left;
+  text-align: center;
+  font: 18px "Quicksand", sans-serif;
+  padding: 7px 13px;
+  width: 150px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.campos input[type="button"] :hover {
+  background-color: #000;
+}
+.campos input[type="button"] {
+  background: #4682b4;
+  border-radius: 0 6px 6px 0;
+  color: #fff;
+  cursor: pointer;
+  height: 34px;
+  font: 18px "Quicksand", sans-serif;
+  padding: 2px 10px 6px;
+  width: 150px;
+
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+
+.campos input[type="button"]:hover {
+  background: #000000;
+}
+
+#mapa {
+  width: 930px;
+  height: 300px;
+  box-shadow: 0px 0px 18px #000;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+input[type="submit"] {
+  background: #4682b4;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font: 20px "Quicksand", sans-serif;
+  padding: 7.5px 10px;
+  width: 250px;
+  margin-top: 10px;
+
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+input[type="submit"]:hover {
+  background: #000000;
+}
+
+.ui-autocomplete {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  font: 15px "Quicksand", sans-serif;
+  margin-left: 3px;
+  width: 493px !important;
+  position: fixed;
+}
+
+.ui-autocomplete .ui-menu-item {
+  list-style: none outside none;
+  padding: 7px 0 9px 10px;
+}
+
+.ui-autocomplete .ui-menu-item:hover {
+  background: #000000;
+}
+
+.ui-autocomplete .ui-corner-all {
+  color: #666 !important;
+  display: block;
+}
+
+img {
+  margin-top: 50px;
+}
+.imagem {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+center {
+  animation: fadein 4s;
+}
+
+p {
+  font: 25px "Quicksand", sans-serif;
+  color: #4682b4;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  } /* Padrão */
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  } /* Firefox */
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  } /* Webkit */
+}
+@-ms-keyframes fadein {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  } /* IE */
+}
+​ @keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  } /* Padrão */
+}
+@-moz-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  } /* Firefox */
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  } /* Webkit */
+}
+@-ms-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  } /* IE */
+}
+
+footer {
+  background-color: #a9a9a9;
+  font: 100% "Quicksand", sans-serif;
+  color: #4682b4;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+.mapapesquisa {
+  margin-top: 50px;
+}
+
+tr {
+  margin-top: -0.5px;
+}
