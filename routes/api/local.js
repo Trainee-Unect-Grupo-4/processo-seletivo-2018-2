@@ -23,7 +23,7 @@ router.post("/create", (req, res) => {
   });
 
   newLocal.save().then(item => res.json(item));
-  res.redirect("http://127.0.0.1:5500/Cadastrar.html");
+  res.redirect("http://127.0.0.1:5500/index.html");
 });
 // Coletando todos os locais no banco.
 

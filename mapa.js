@@ -51,6 +51,10 @@ function initialize() {
         data.grupo +
         "<br />Endereço: " +
         data.endereco +
+        "<br />E-mail:" +
+        data.email +
+        "<br />Telefone:" +
+        data.telefone +
         "</div></div>";
 
       bindInfoWindow(marker, mapa, infowindow, details);
