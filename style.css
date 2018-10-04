@@ -32,40 +32,23 @@ h1 {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> Database
 .campos label {
   background: #4682b4;
   color: #f0f0f0;
   cursor: pointer;
   display: block;
-<<<<<<< HEAD
   height: 36px;
-=======
-  height: 22px;
->>>>>>> Database
   float: left;
   font: 18px "Quicksand", sans-serif;
   padding: 7px 13px;
   width: 100px;
   border-radius: 6px 6px 6px 6px;
-<<<<<<< HEAD
   margin: 5px 5px 5px 0px;
   text-align: center;
 }
 
 .campos input {
   background: #a19e9e60;
-=======
-
-  text-align: center;
-}
-
-.campos input[type="text"] {
-  background: #fff;
->>>>>>> Database
   color: #000000;
   display: block;
   float: left;
@@ -74,24 +57,9 @@ h1 {
   padding: 9px;
   width: 344px;
   border-radius: 6px 6px 6px 6px;
-<<<<<<< HEAD
   margin: 5px 5px 5px 0px;
-   
-  }
-
-=======
 }
 
-.margin-top {
-  margin-top: 5px;
-  margin-right: 5px;
-}
-
-.margin-endereco {
-  margin-left: 5px;
-  margin-top: 5px;
-}
->>>>>>> Database
 .campos select {
   background: #4682b4;
   border-radius: 6px 6px 6px 6px;
@@ -109,18 +77,10 @@ h1 {
   margin-left: 5px;
 }
 
-<<<<<<< HEAD
-.campos input[type="button"] :hover{
-    background-color: #000;
-
-}
-.campos input[type="button"]{
-=======
 .campos input[type="button"] :hover {
   background-color: #000;
 }
 .campos input[type="button"] {
->>>>>>> Database
   background: #4682b4;
   border-radius: 0 6px 6px 0;
   color: #fff;
@@ -143,15 +103,14 @@ h1 {
 
 #mapa {
   width: 930px;
-<<<<<<< HEAD
   height: 60vh;
   box-shadow: 0px 0px 18px #000;
   margin: 0 auto;
-  margin-top: 70px; 
+  margin-top: 70px;
   margin-bottom: 20px;
 }
 
-#btnCadastrar{
+#btnCadastrar {
   display: grid;
   margin-left: auto;
   margin-right: auto;
@@ -163,25 +122,14 @@ h1 {
 #index {
   display: grid;
   text-align: center;
-
 }
 #index img {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
-input[type="submit"] {
-  background: #4682B4;
-=======
-  height: 300px;
-  box-shadow: 0px 0px 18px #000;
-  margin: 0 auto;
-  margin-top: 15px;
-}
-
 input[type="submit"] {
   background: #4682b4;
->>>>>>> Database
   border-radius: 6px;
   color: #fff;
   cursor: pointer;
@@ -226,73 +174,6 @@ input[type="submit"]:hover {
   display: block;
 }
 
-<<<<<<< HEAD
-img{
-  margin-top: 50px;
-}
-.imagem{
-    margin-top: 10px;
-    margin-left: 10px;
-
-}
-
-center{
-  animation: fadein 4s;
-}
-
-p{
-    font: 25px "Quicksand", sans-serif;
-    color: #4682b4; 
-}
-
-@keyframes fadein {
-  from { opacity: 0.3; }
-  to { opacity: 1; } /* Padrão */
-  }
-  @-moz-keyframes fadein {
-  from { opacity: 0.3; }
-  to { opacity: 1; } /* Firefox */
-  }
-  @-webkit-keyframes fadein {
-  from { opacity: 0.3; }
-  to { opacity: 1; } /* Webkit */
-  }
-  @-ms-keyframes fadein {
-  from { opacity: 0.3; }
-  to { opacity: 1; } /* IE */
-  }​
-  
-  @keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0.3; } /* Padrão */
-  }
-  @-moz-keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0.3; } /* Firefox */
-  }
-  @-webkit-keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0.3; } /* Webkit */
-  }
-  @-ms-keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0.3; } /* IE */
-  }
-
-  footer{
-      background-color: #a9a9a9;
-      font: 100% "Quicksand", sans-serif;
-      color: #4682b4;
-      margin: 0px 0px 0px;
-  }
-  .mapapesquisa{
-      margin-top: 50px;
-  }
-
-  tr{
-    margin-top: -0.5px;
-  }
-=======
 img {
   margin-top: 50px;
 }
@@ -379,8 +260,7 @@ footer {
   background-color: #a9a9a9;
   font: 100% "Quicksand", sans-serif;
   color: #4682b4;
-  margin-bottom: 0px;
-  margin-top: 50px;
+  margin: 0px 0px 0px;
 }
 .mapapesquisa {
   margin-top: 50px;
@@ -389,4 +269,3 @@ footer {
 tr {
   margin-top: -0.5px;
 }
->>>>>>> Database
