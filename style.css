@@ -42,6 +42,7 @@ h1 {
   padding: 7px 13px;
   border-radius: 6px;
   text-align: center;
+  width: 100px;
 }
 
 .campos input {
@@ -52,7 +53,7 @@ h1 {
   font: 16px "Quicksand", sans-serif;
   height: 36px;
   padding: 9px;
-  width: 220px;
+  width: 450px;
   border-radius: 6px;
   margin: 0px 5px 5px 0px;
    
@@ -108,19 +109,24 @@ h1 {
   height: 70vh;
   box-shadow: 0px 0px 18px #000;
   border-radius: 10px;
-  margin-top: 80px;
-  margin-bottom: 20px;    
+  margin: 100px 5px 5px 10px;   
   position: fixed;
 }
 
 #btnCadastrar {
   display: grid;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px 5px 5px 10px;  
+
 }
 .cadastro {
   display: flex;
-  margin: 5px 5px 200px 5px;
+  margin: 5px 5px 10px 5px;
+  position:fixed;
+}
+
+.cadastro2 {
+  display: flex;
+  margin: 50px 5px 10px 5px;
  position:fixed;
 }
 #index {
@@ -145,7 +151,7 @@ input[type="submit"] {
   transition: background 0.2s ease-in;
 }
 input[type="submit"]:hover {
-  background: #000000;
+  background: #27408B; ;
 }
 
 .ui-autocomplete {
