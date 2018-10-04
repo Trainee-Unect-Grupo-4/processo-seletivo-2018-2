@@ -38,17 +38,17 @@ h1 {
   color: #f0f0f0;
   cursor: pointer;
   display: block;
-  height: 28px;
+  height: 36px;
   float: left;
   font: 18px "Quicksand", sans-serif;
   padding: 7px 13px;
   width: 100px;
   border-radius: 6px 6px 6px 6px;
-  
+  margin: 5px 5px 5px 0px;
   text-align: center;
 }
 
-.campos input[type="text"] {
+.campos input {
   background: #a19e9e60;
   color: #000000;
   display: block;
@@ -58,19 +58,10 @@ h1 {
   padding: 9px;
   width: 344px;
   border-radius: 6px 6px 6px 6px;
+  margin: 5px 5px 5px 0px;
    
   }
 
-.margin-top {
-  margin-top: 5px;
-  margin-right: 5px;
-}
-
-.margin-endereco {
-  margin-left: 5px;
-  margin-top: 5px;
-  
-}
 .campos select {
   background: #4682b4;
   border-radius: 6px 6px 6px 6px;
@@ -122,7 +113,25 @@ h1 {
   margin-bottom: 20px;
 }
 
+#btnCadastrar{
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cadastro {
+  display: block;
+  margin: 5px 5px 200px 5px;
+}
+#index {
+  display: grid;
+  text-align: center;
 
+}
+#index img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
 input[type="submit"] {
   background: #4682B4;
   border-radius: 6px;
@@ -225,8 +234,7 @@ p{
       background-color: #a9a9a9;
       font: 100% "Quicksand", sans-serif;
       color: #4682b4;
-      margin-bottom: 0px;
-      margin-top: 50px;
+      margin: 0px 0px 0px;
   }
   .mapapesquisa{
       margin-top: 50px;

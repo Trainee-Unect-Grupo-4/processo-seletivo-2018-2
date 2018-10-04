@@ -144,27 +144,28 @@
                                         <option value="Somente meninos">Somente meninos</option>
                                         <option value="Misto">Misto</option>
                                     </select>
-                                    <label class="margin-endereco" for="txtNome">Nome: </label>
-                                    <input class="margin-top" type="text" id="nome" name="nome" />
-                                    <label class="margin-endereco" for="txtEndereco">Endereço:</label>
-                                    <input class="margin-top" type="text" id="txtEndereco" name="endereco" />
-                                    <label class="margin-endereco" for="txtNome">Telefone </label>
-                                    <input class="margin-top" type="text" id="nome" name="nome" />
-                                    <label class="margin-endereco" for="txtEndereco">E-mail:</label>
-                                    <input class="margin-top" type="text" id="txtEndereco" name="endereco" />
 
-                                    <div class="campos"></div>
+                                    <div class="cadastro">
+                                        <label for="txtNome">Nome: </label>
+                                        <input type="text" id="txtNome" name="nome" />
+
+                                        <label for="txtEndereco">Endereço:</label>
+                                        <input type="text" id="txtEndereco" name="endereco" />
+
+                                        <label for="txtTelefone">Telefone </label>
+                                        <input type="tel" id="txtTelefone" name="telefone" />
+
+                                        <label for="txtEmail">E-mail:</label>
+                                        <input type="email" id="txtEmail" name="email" />
+                                    </div>
 
                                     <div id="mapa"></div>
 
                                     <input type="hidden" id="txtLatitude" name="latitude" />
                                     <input type="hidden" id="txtLongitude" name="longitude" />
-                                    <center>
-                                        <table>
-                                            <td><input type="submit" value="Cadastrar" name="btnCadastrar" /></td>
-                                            <td><input type="submit" value="Limpar" name="btnClean" /></td>
-                                        </table>
-                                    </center>
+                                    <div id="btnCadastrar">
+                                        <input type="submit" value="Cadastrar" name="btnCadastrar" />
+                                    </div>
                                 </div>
                             </fieldset>
                         </form>
@@ -174,20 +175,20 @@
             </main>
         </div>
     </div>
-        <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
     ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="src/jquery-3.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-        <script src="src/popper.js"></script>
-        <script src="src/bootstrap.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="src/jquery-3.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="src/popper.js"></script>
+    <script src="src/bootstrap.js"></script>
 
-        <!-- Icons -->
-        <script src="src/feather.js"></script>
-        <script>
-            feather.replace()
-        </script>
+    <!-- Icons -->
+    <script src="src/feather.js"></script>
+    <script>
+        feather.replace()
+    </script>
 
 
 </body>
