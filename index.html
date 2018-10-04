@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="src/css/bootstrap.css" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -116,20 +117,22 @@
                             <label for="txtEndereco">Endereço:</label>
                             <input type="text" id="txtEndereco" name="endereco" />
 
+                            <input type="hidden" id="txtLatitude" name="latitude" />
+                            <input type="hidden" id="txtLongitude" name="longitude" />
+                        </div>
+                        <div class ="cadastro2">
                             <label for="txtTelefone">Telefone </label>
                             <input type="tel" id="txtTelefone" name="telefone" />
 
                             <label for="txtEmail">E-mail:</label>
                             <input type="email" id="txtEmail" name="email" />
 
-                            <input type="hidden" id="txtLatitude" name="latitude" />
-                            <input type="hidden" id="txtLongitude" name="longitude" />
                         </div>
-                    </div>
-                    <div class="mapSubmit">
-                        <div id="mapa"></div>
-                        <div id="btnCadastrar">
-                            <input type="submit" value="Cadastrar" name="btnCadastrar" />
+                        <div class="mapSubmit">
+                            <div id="mapa"></div>
+                            <div id="btnCadastrar">
+                                <input type="submit" value="Cadastrar" name="btnCadastrar" />
+                            </div>
                         </div>
                     </div>
                 </div>
