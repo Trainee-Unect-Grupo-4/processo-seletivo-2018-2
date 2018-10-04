@@ -27,44 +27,42 @@ h1 {
 }
 
 .campos {
-  width: 960px;
-  margin: 0 auto;
+  width: 220px;
   overflow: hidden;
 }
 
 
 .campos label {
-  background: #4682b4;
+  background: #4682B4;
   color: #f0f0f0;
   cursor: pointer;
   display: block;
   height: 36px;
   float: left;
-  font: 18px "Quicksand", sans-serif;
+  font: 16px "Quicksand", sans-serif;
   padding: 7px 13px;
-  width: 100px;
-  border-radius: 6px 6px 6px 6px;
-  margin: 5px 5px 5px 0px;
+  border-radius: 6px;
   text-align: center;
 }
 
 .campos input {
+  display: flex;
   background: #a19e9e60;
-  color: #000000;
+  color: #000;
   display: block;
-  float: left;
-  font: 18px "Quicksand", sans-serif;
+  font: 16px "Quicksand", sans-serif;
   height: 36px;
   padding: 9px;
-  width: 344px;
-  border-radius: 6px 6px 6px 6px;
-  margin: 5px 5px 5px 0px;
+  width: 220px;
+  border-radius: 6px;
+  margin: 0px 5px 5px 0px;
+   
    
   }
 
 .campos select {
-  background: #4682b4;
-  border-radius: 6px 6px 6px 6px;
+  background: #4682B4;
+  border-radius: 6px;
   color: #f0f0f0;
   cursor: pointer;
   display: block;
@@ -73,10 +71,8 @@ h1 {
   text-align: center;
   font: 18px "Quicksand", sans-serif;
   padding: 7px 13px;
-  width: 150px;
+  width: 100%;
   margin-bottom: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
 }
 
 .campos input[type="button"] :hover{
@@ -103,14 +99,20 @@ h1 {
 .campos input[type="button"]:hover {
   background: #000000;
 }
+.mapSubmit{
+  display:block;
+  
+}
 
 #mapa {
+ display: flex;
   width: 930px;
-  height: 60vh;
+  height: 70vh;
   box-shadow: 0px 0px 18px #000;
-  margin: 0 auto;
-  margin-top: 70px; 
-  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-bottom: 20px;    
+  position: fixed;
 }
 
 #btnCadastrar{
@@ -119,18 +121,14 @@ h1 {
   margin-right: auto;
 }
 .cadastro {
-  display: block;
+  display: flex;
   margin: 5px 5px 200px 5px;
+ position:fixed;
 }
 #index {
   display: grid;
   text-align: center;
 
-}
-#index img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto
 }
 input[type="submit"] {
   background: #4682B4;
@@ -141,7 +139,6 @@ input[type="submit"] {
   margin: 0 auto;
   font: 20px "Quicksand", sans-serif;
   padding: 7.5px 10px;
-  width: 250px;
   margin-top: 10px;
 
   -webkit-transition: background 0.2s ease-in;
@@ -178,24 +175,6 @@ input[type="submit"]:hover {
   display: block;
 }
 
-img{
-  margin-top: 50px;
-}
-.imagem{
-    margin-top: 10px;
-    margin-left: 10px;
-
-}
-
-center{
-  animation: fadein 4s;
-}
-
-p{
-    font: 25px "Quicksand", sans-serif;
-    color: #4682b4; 
-}
-
 @keyframes fadein {
   from { opacity: 0.3; }
   to { opacity: 1; } /* Padrão */
@@ -228,18 +207,4 @@ p{
   @-ms-keyframes fadeout {
   from { opacity: 1; }
   to { opacity: 0.3; } /* IE */
-  }
-
-  footer{
-      background-color: #a9a9a9;
-      font: 100% "Quicksand", sans-serif;
-      color: #4682b4;
-      margin: 0px 0px 0px;
-  }
-  .mapapesquisa{
-      margin-top: 50px;
-  }
-
-  tr{
-    margin-top: -0.5px;
   }

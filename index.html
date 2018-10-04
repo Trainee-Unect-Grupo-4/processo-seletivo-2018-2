@@ -1,33 +1,145 @@
-<!DOCTYPE >
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Rep-Me! - Seja Bem-vindo!</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" type="text/css" rel="stylesheet" />
-    <link href="style.css" type="text/css" rel="stylesheet" />
- 
+    <title>Rep-Me! - Cadastro</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
+    <link href="src/css/main.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDOVsqOeaPybTdLpIUSAi-DZiRMqWXaGQE&sensor=false"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="mapa.js"></script>
     <script type="text/javascript" src="jquery-ui.custom.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="src/css/bootstrap.css" rel="stylesheet">
 
 </head>
 
-
 <body>
-<div id="index">
-    <img src=".\logo.png">
-    <p>O Rep-Me! é um site voltado especialmente para quem deseja anunciar <br> ou alugar moradias em Cornélio Procópio e região !
-        
-        <br><br> Comece por aqui:
-    </p>                       
-            <table>
-                <td><input type="submit" onclick="window.location='Cadastrar.html'" value="Cadastrar" name="btnCadastrar" /></td>
-            </table> 
-        
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html">Rep-Me!</a>
+    </nav>
+    <!-- Fim Navbar-->
+    <form method="post" action="http://127.0.0.1:5000/api/local/create">
+        <fieldset>
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- Sidebar-->
+                    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                        <div class="sidebar-sticky">
+                            <ul>
+                                <div id="apresentacao">
+                                    <li>
+                                        <div class="campos">
+                                            <select id="moradia" name="moradia">
+                                                <option selected disabled hidden>Moradia</option>
+                                                <option value="República">República</option>
+                                                <option value="Kitnet">Kitnet</option>
+                                                <option value="Apartamento">Apartamento</option>
+                                                <option value="Pensionato">Pensionato</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="campos">
+                                            <select id="vaga" name="vaga">
+                                                <option selected disabled hidden>Vagas</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4+">4+</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="campos">
+                                            <select id="valor" name="valor">
+                                                <option selected disabled hidden>Valor</option>
+                                                <option value="Entre R$200,00 e R$300,00">Entre R$200,00 e R$300,00</option>
+                                                <option value="Entre R$300,00 e R$400,00">Entre R$300,00 e R$400,00</option>
+                                                <option value="Entre R$400,00 e R$500,00">Entre R$400,00 e R$500,00</option>
+                                                <option value="Entre R$500,00 e R$600,00">Entre R$500,00 e R$600,00</option>
+                                                <option value="Entre R$600,00 e R$700,00">Entre R$600,00 e R$700,00</option>
+                                            </select>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="campos">
+                                            <select id="quarto" name="quarto">
+                                                <option selected disabled hidden>Quarto</option>
+                                                <option value="Individual">Individual</option>
+                                                <option value="Compartilhado">Compartilhado</option>
+                                            </select>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="campos">
+                                            <select id="mobilia" name="mobilia">
+                                                <option selected disabled hidden>Mobilia</option>
+                                                <option value="Sim">Sim</option>
+                                                <option value="Não">Não</option>
+                                            </select>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="campos">
+                                            <select id="grupo" name="grupo">
+                                                <option selected disabled hidden>Grupo</option>
+                                                <option value="Somente meninas">Somente meninas</option>
+                                                <option value="Somente meninos">Somente meninos</option>
+                                                <option value="Misto">Misto</option>
+                                            </select>
+                                        </div>
+                                    </li>
+
+                            </ul>
+                        </div>
+
+                    </nav>
+                    <!--Fim Sidebar-->
+                    <!-- Conteúdo -->
+                    <div class="campos">
+                        <div class="cadastro">
+                            <label for="txtNome">Nome: </label>
+                            <input type="text" id="txtNome" name="nome" />
+
+                            <label for="txtEndereco">Endereço:</label>
+                            <input type="text" id="txtEndereco" name="endereco" />
+
+                            <label for="txtTelefone">Telefone </label>
+                            <input type="tel" id="txtTelefone" name="telefone" />
+
+                            <label for="txtEmail">E-mail:</label>
+                            <input type="email" id="txtEmail" name="email" />
+
+                            <input type="hidden" id="txtLatitude" name="latitude" />
+                            <input type="hidden" id="txtLongitude" name="longitude" />
+                        </div>
+                    </div>
+                    <div class="mapSubmit">
+                        <div id="mapa"></div>
+                        <div id="btnCadastrar">
+                            <input type="submit" value="Cadastrar" name="btnCadastrar" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <!-- Fim Conteúdo -->
 
 </body>
-<footer>
-   
-    </footer>
+
 </html>
